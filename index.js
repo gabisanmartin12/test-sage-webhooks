@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 6000;
 
 // Parse body request
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/item', (req, res) => {
   console.log(req.body);
